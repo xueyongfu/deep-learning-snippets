@@ -1,15 +1,6 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-
-
-
-# In[5]:
-
-
 import os
 import time
 import threading
@@ -57,20 +48,6 @@ if __name__ == '__main__':
         process.join()
     print('多进程执行时间:%d'%(time.time()-start_time))
 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 

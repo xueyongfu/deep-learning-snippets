@@ -35,9 +35,6 @@ b = process.extractOne("cowboys", choices)
 print(b)
 
 
-
-
-
 # You can also pass additional parameters to extractOne method to make it use a specific scorer. 
 # A typical use case is to match file paths:
 songs = 'Hypnotize'

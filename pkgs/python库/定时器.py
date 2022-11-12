@@ -1,17 +1,6 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
-
 import sched
 import time
 from datetime import datetime
-
-
-# In[ ]:
-
-
 
 # 初始化sched模块的 scheduler 类
 # 第一个参数是一个可以返回时间戳的函数，第二个参数可以在定时未到达之前阻塞。
@@ -33,9 +22,6 @@ def main(inc=4):
 main(10)
 
 
-# In[ ]:
-
-
 # 首先来看一个周一到周五每天早上6点半喊我起床的例子
 
 from apscheduler.schedulers.blocking import BlockingScheduler
@@ -51,8 +37,6 @@ scheduler.start()
 # BlockingScheduler是APScheduler中的调度器, trigger可取 cron(定时), interval(间隔), data
 
 
-# In[ ]:
-
 
 from apscheduler.schedulers.blocking import BlockingScheduler
 from datetime import datetime
@@ -64,14 +48,6 @@ sched = BlockingScheduler()
 sched.add_job(job, 'interval', seconds=1)
 sched.start()
 
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 # 对 job 的操作
@@ -92,9 +68,6 @@ def job_function():
 sched.start()
 
 
-# In[ ]:
-
-
 # 2.移除 job
 # 移除 job 也有两种方法：
 
@@ -106,21 +79,6 @@ job.remove()
 # id
 scheduler.add_job(myfunc, 'interval', minutes=2, id='my_job_id')
 scheduler.remove_job('my_job_id')
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
 
 
 
